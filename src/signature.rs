@@ -280,7 +280,7 @@ pub use crate::ec::{
 #[cfg(feature = "alloc")]
 pub use crate::rsa::{
     padding::{
-        RsaEncoding, RSA_PKCS1_SHA256, RSA_PKCS1_SHA384, RSA_PKCS1_SHA512, RSA_PSS_SHA256,
+        RsaEncoding, RSA_PKCS1_SHA1_FOR_LEGACY_USE_ONLY, RSA_PKCS1_SHA256, RSA_PKCS1_SHA384, RSA_PKCS1_SHA512, RSA_PSS_SHA256,
         RSA_PSS_SHA384, RSA_PSS_SHA512,
     },
     verification::{
