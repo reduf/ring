@@ -99,7 +99,8 @@ pub mod rsa;
 
 pub mod signature;
 
-mod sealed {
+/// @TODO: Add a real comment.
+pub mod sealed {
     /// Traits that are designed to only be implemented internally in *ring*.
     //
     // Usage:

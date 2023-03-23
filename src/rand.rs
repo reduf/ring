@@ -62,16 +62,21 @@ where
     Ok(Random(r))
 }
 
-pub(crate) mod sealed {
+/// @TODO: Add a real comment.
+pub mod sealed {
     use crate::error;
 
+    /// @TODO: Add a real comment.
     pub trait SecureRandom: core::fmt::Debug {
         /// Fills `dest` with random bytes.
         fn fill_impl(&self, dest: &mut [u8]) -> Result<(), error::Unspecified>;
     }
 
+    /// @TODO: Add a real comment.
     pub trait RandomlyConstructable: Sized {
+        /// @TODO: Add a real comment.
         fn zero() -> Self; // `Default::default()`
+        /// @TODO: Add a real comment.
         fn as_mut_bytes(&mut self) -> &mut [u8]; // `AsMut<[u8]>::as_mut`
     }
 
