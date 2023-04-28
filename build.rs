@@ -676,7 +676,7 @@ fn nasm(file: &Path, arch: &str, include_dir: &Path, out_file: &Path) -> Command
         std::path::MAIN_SEPARATOR,
     )));
 
-    let mut c = Command::new("./target/tools/windows/nasm/nasm");
+    let mut c = Command::new("./tools/windows/nasm/nasm.exe");
     let _ = c
         .arg("-o")
         .arg(out_file.to_str().expect("Invalid path"))
@@ -787,7 +787,7 @@ fn perlasm(src_dst: &[(PathBuf, PathBuf)], asm_target: &AsmTarget) {
             .expect("Could not convert path")
             .replace('\\', "/");
         args.push(dst);
-        run_command_with_args(&get_command("PERL_EXECUTABLE", "perl"), &args);
+        run_command_with_args("./tools/windows/perl/bin/perl.exe", &args);
     }
 }
 
